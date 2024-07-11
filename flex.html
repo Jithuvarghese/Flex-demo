@@ -1,87 +1,132 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex
-    </title>
+    <title>Card Layout</title>
     <style>
-     body {
+        body {
             display: flex;
-            justify-content: flex-start;
-            align-items: start;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            margin: 100px;
-            background-color: #f0f0f0;
+            margin: 0;
+            background-color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+            max-width: 1500px;
+            background-color: #493d3d;
+            padding: 75px;
+            border-radius: 8px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            height: 100vh;
+            width: 450vh;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 160px;
+            margin: 10px;
+            background-color: #b9f160;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
-.flexbox-cont
-{
-display: flex;
-border: 5px solid red;
-background-color: #f7b9b9;
-flex-wrap:;
-flex-direction:row;
-justify-content: space-around;
-align-self:stretch;
-align-items: stretch;
-height: 150em;
-gap: 5em;
-}
-
-.img
-{
-width: 150px;
-height: 150px;
-}
-
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 16px;
+        }
+        .card-content h2 {
+            font-size: 1.2em;
+            margin: 0 0 8px;
+        }
+        .card-content p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .card-content .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #888;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .card-content .btn:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
-<div class ="flexbox-cont">
-    <div class="box1">
-        <img src="C:\Users\Asus\Downloads\Cubbon.jpg" alt="Description of the photo" class="photo"> 
-        <div class="caption">
-            <h2>Photo Title</h2>
-            <p>This is the caption for the photo. It provides additional information about the image.</p>
-        </div>   
+    <div class="container"> 
+        <div class="card">
+            <img src="C:\Users\Asus\Downloads\Cubbon.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Cubbon</h2>
+                <p>Cubbon Park, also known as Sri Chamarajendra Park is one of the famous landmarks of Bangalore. It was originally created in the year 1870 by Richard Sankey, who was the Mysore's British Dominant Engineer at that time..</p>
+                <a href="#" class="btn">Visit</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Asus\Downloads\nandi-hills.jpg" alt="Image 2">
+            <div class="card-content">
+                <h2>Nandi-hills</h2>
+                <p>Nandi Hills is one of the perfect places near Bangalore for nature lovers. The hill station is situated 60 kilometers from the city's center and offers a fantastic view of monolithic granite figure. The pleasant weather has particularly made it an interesting weekend destination to horticulturists.</p>
+                <a href="#" class="btn">Visit</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Asus\Downloads\tipu-sultan-summer-palace.jpg" alt="Image 3">
+            <div class="card-content">
+                <h2>Tipu-sultan palace</h2>
+                <p>The royal summer fort of the popular king "Tipu Sultan" is now transformed into a beautiful museum, and is certainly one of the best places to visit in Bangalore with kids. With old paintings, magnificent figures, and other remarkable artworks, this palace has gained a lot of popularity in the recent decades.</p>
+                <a href="#" class="btn">Visit</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Asus\Downloads\Bengaluru-Lalbhag-1.jpg" alt="Image 4">
+            <div class="card-content">
+                <h2>Lalbhag</h2>
+                <p>Lal Bagh is one of the most admired botanic gardens in India. It has an unusual glass house that hosts two flower shows every year, which falls on 15 August (Independence Day) and 26 January (Republic Day).
+                </p>
+                <a href="#" class="btn">Visit</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Asus\Downloads\Bangalore_Mysore_Maharaja_Palace.jpg" alt="Image 5">
+            <div class="card-content">
+                <h2>Mysore Maharaja Palace</h2>
+                <p>Bangalore palace is located within 200 kms from the city and is a great place to spend time. Originally owned by Rev. J. Garrett, the Bangalore Palace is one of the best historical places to see. Since Maharaja Chamarajendra Wadiyar wanted a place to stay during his training period in Bengaluru, he bought the entire fort in 1873 AD from Garrett.</p>
+                <a href="#" class="btn">Visit</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Asus\Downloads\ISKCONTemple_Main.jpg" alt="Image 6">
+            <div class="card-content">
+                <h2>ISKCON Temple</h2>
+                <p>ISKCON Bengaluru is one of the world's biggest ISKCON temples offering an outstanding religious experience. With a an impressive architecture, the temple is well known for organizing several activities for the devotees of Lord Krishna.</p>
+                <a href="#" class="btn">Visit</a>
+            </div>
+        </div>
     </div>
-    <div class="box2">
-        <img src="C:\Users\Asus\Downloads\nandi-hills.jpg" alt="Description of the photo" class="photo">
-        <div class="caption">
-            <h2>Photo Title</h2>
-            <p>This is the caption for the photo. It provides additional information about the image.</p>
-        </div>   
-    </div>
-    <div class="box3">
-        <img src="C:\Users\Asus\Downloads\tipu-sultan-summer-palace.jpg" alt="Description of the photo" class="photo">
-        <div class="caption">
-            <h2>Photo Title</h2>
-            <p>This is the caption for the photo. It provides additional information about the image.</p>
-        </div>   
-    </div>
-    <div class="box4">
-        <img src="C:\Users\Asus\Downloads\Bengaluru-Lalbhag-1.jpg" alt="Description of the photo" class="photo">
-        <div class="caption">
-            <h2>Photo Title</h2>
-            <p>This is the caption for the photo. It provides additional information about the image.</p>
-        </div>   
-    </div>
-    <div class="box5">
-        <img src="C:\Users\Asus\Downloads\Bangalore_Mysore_Maharaja_Palace.jpg" alt="Description of the photo" class="photo">
-        <div class="caption">
-            <h2>Photo Title</h2>
-            <p>This is the caption for the photo. It provides additional information about the image.</p>
-        </div>   
-    </div>
-    <div class="box6">
-        <img src="C:\Users\Asus\Downloads\ISKCONTemple_Main.jpg" alt="Description of the photo" class="photo">
-        <div class="caption">
-            <h2>Photo Title</h2>
-            <p>This is the caption for the photo. It provides additional information about the image.</p>
-        </div>   
-    </div>
-</div>   
-   
 </body>
 </html>
