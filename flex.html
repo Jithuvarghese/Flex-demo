@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Layout</title>  
     <style>
+        
         body {
           
             justify-content: center;
@@ -15,9 +16,21 @@
             margin: 0;
             background-color: #333;
         }
-        h1 {
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
             text-align: center;
         }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;}
+
         .container {
             display: flex;  
             flex-wrap: wrap;
@@ -82,7 +95,12 @@
     </style>
 </head>
 <body>
-    <h1>Places to visit in Banglore</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="flex.html">Places</a>
+    </nav>
+
     <div class="container"> 
 
         <div class="card">
